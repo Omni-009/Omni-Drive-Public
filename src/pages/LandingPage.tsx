@@ -31,6 +31,7 @@ import { getAccessToken, getStoredUser } from '@/lib/auth'
 
 export function LandingPage({ downloadFocus = false }: { downloadFocus?: boolean }) {
   const navigate = useNavigate()
+  const APK_DOWNLOAD_URL = 'https://github.com/Omni-009/Omni-Drive-Public/releases/download/v1.0.0/OmniDrive.apk'
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [user, setUser] = useState<{ name?: string; email?: string } | null>(null)
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -112,7 +113,7 @@ export function LandingPage({ downloadFocus = false }: { downloadFocus?: boolean
                   OmniDrive
                 </span>
                 <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-[10px] font-bold text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 border border-blue-500/20">
-                  v12.0
+                  v1.0.0
                 </span>
               </div>
               <span className="text-[10px] font-medium tracking-wide text-slate-400 dark:text-slate-500 uppercase">
@@ -188,7 +189,7 @@ export function LandingPage({ downloadFocus = false }: { downloadFocus?: boolean
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-50/80 px-4 py-1.5 text-xs font-semibold text-blue-700 shadow-sm backdrop-blur-md dark:border-blue-500/20 dark:bg-blue-950/60 dark:text-blue-300 mb-8 animate-fade-in">
             <Sparkles className="h-3.5 w-3.5 text-blue-500" />
-            <span>OmniDrive 12.0 • Ultra-Fast Google Drive Storage Gateway</span>
+            <span>OmniDrive 1.0.0 • Ultra-Fast Google Drive Storage Gateway</span>
           </div>
 
           {/* Headline */}
@@ -207,14 +208,15 @@ export function LandingPage({ downloadFocus = false }: { downloadFocus?: boolean
           {/* Dual CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/OmniDrive.apk"
-              download="OmniDrive.apk"
+              href={APK_DOWNLOAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-7 py-4 shadow-xl shadow-emerald-500/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <Smartphone className="h-5 w-5" />
               <div className="text-left">
-                <div className="text-xs uppercase tracking-wider text-emerald-200">Android APK</div>
-                <div className="text-base font-bold">Download App (v12.0.0)</div>
+                <div className="text-xs uppercase tracking-wider text-emerald-200">Official Android APK</div>
+                <div className="text-base font-bold">Download App (v1.0.0)</div>
               </div>
             </a>
 
@@ -842,16 +844,17 @@ export function LandingPage({ downloadFocus = false }: { downloadFocus?: boolean
 
                 <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                   <a
-                    href="/OmniDrive.apk"
-                    download="OmniDrive.apk"
+                    href={APK_DOWNLOAD_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-8 py-4.5 text-base shadow-xl shadow-emerald-500/30 transition-all hover:scale-[1.03] active:scale-[0.98]"
                   >
                     <Download className="h-5 w-5" />
-                    <span>Download APK (v12.0.0)</span>
+                    <span>Download APK (v1.0.0)</span>
                   </a>
 
                   <div className="flex flex-col text-xs text-slate-400 justify-center">
-                    <span className="font-semibold text-white">Size: ~4.46 MB • Fast Install</span>
+                    <span className="font-semibold text-white">Size: ~4.46 MB • Direct GitHub Release</span>
                     <span>Requires Android 8.0 (Oreo) or higher</span>
                   </div>
                 </div>
@@ -876,11 +879,11 @@ export function LandingPage({ downloadFocus = false }: { downloadFocus?: boolean
                   <div className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
                     Scan to Install on Mobile
                   </div>
-                  {/* Clean QR code image generated for the direct APK link */}
+                  {/* Clean QR code image pointing directly to GitHub Release download */}
                   <div className="mx-auto h-48 w-48 rounded-xl bg-white p-2.5 shadow-md flex items-center justify-center">
                     <img
                       src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(
-                        window.location.origin + '/OmniDrive.apk'
+                        APK_DOWNLOAD_URL
                       )}`}
                       alt="Scan to download OmniDrive.apk"
                       className="h-full w-full object-contain"
@@ -975,12 +978,13 @@ export function LandingPage({ downloadFocus = false }: { downloadFocus?: boolean
                 {isLoggedIn ? 'Go to Dashboard' : 'Create Free Account'}
               </Button>
               <a
-                href="/OmniDrive.apk"
-                download="OmniDrive.apk"
+                href={APK_DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-950/40 hover:bg-slate-950/60 text-white font-bold px-7 py-3.5 text-base border border-white/20 transition-transform hover:scale-105"
               >
                 <Smartphone className="h-5 w-5" />
-                <span>Download Android APK</span>
+                <span>Download Android APK (v1.0.0)</span>
               </a>
             </div>
           </div>
@@ -1008,7 +1012,7 @@ export function LandingPage({ downloadFocus = false }: { downloadFocus?: boolean
 
           <div className="flex items-center gap-2 text-[11px]">
             <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            <span>TiDB & Cloudflare Operational • v12.0.0</span>
+            <span>TiDB & Cloudflare Operational • v1.0.0</span>
           </div>
         </div>
         <div className="mt-8 text-center text-[11px] text-slate-400">
