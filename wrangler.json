@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "omnidrive",
+  "name": "9drive-frontend",
   "compatibility_date": "2026-10-23",
   "assets": {
     "directory": "./dist",
