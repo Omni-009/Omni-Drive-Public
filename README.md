@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/Omni-009/Omni-Drive-Public/releases/tag/v1.0.0"><img src="https://img.shields.io/badge/Release-v1.0.0-emerald?style=for-the-badge&logo=android&logoColor=white" alt="Release v1.0.0" /></a>
-  <a href="https://9drive-frontend.baniarohan009.workers.dev"><img src="https://img.shields.io/badge/Live_Website-Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Website" /></a>
+  <a href="https://omnidrive.baniarohan009.workers.dev"><img src="https://img.shields.io/badge/Live_Website-Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Website" /></a>
   <a href="https://github.com/Omni-009/Omni-Drive-Public/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" /></a>
   <img src="https://img.shields.io/badge/Database-TiDB_Serverless-00A67E?style=for-the-badge&logo=mysql&logoColor=white" alt="TiDB Serverless" />
 </p>
@@ -17,7 +17,7 @@
 
 | Platform | Access / Action | Link |
 | :--- | :--- | :--- |
-| 🚀 **Live Web Platform** | Official Website & Cloud Gateway | **[Launch OmniDrive Web](https://9drive-frontend.baniarohan009.workers.dev)** |
+| 🚀 **Live Web Platform** | Official Website & Cloud Gateway | **[Launch OmniDrive Web](https://omnidrive.baniarohan009.workers.dev)** |
 | 📱 **Android App (APK)** | Direct GitHub Release (v1.0.0) | **[Download OmniDrive.apk (v1.0.0)](https://github.com/Omni-009/Omni-Drive-Public/releases/download/v1.0.0/OmniDrive.apk)** |
 | 📦 **GitHub Releases** | All Versions, Changelogs & Assets | **[View Releases](https://github.com/Omni-009/Omni-Drive-Public/releases)** |
 | ☁️ **TiDB Cloud** | Distributed MySQL Database | Active & Operational (99.99% Uptime) |
