@@ -80,7 +80,7 @@ export function RegisterPage() {
     setGoogleLoading(true)
     setError('')
     try {
-      const data = await apiFetch<{ url: string }>('/auth/google/url', { skipAuth: true })
+      const data = await apiFetch<{ url: string }>(`/auth/google/url?frontend_url=${encodeURIComponent(window.location.origin)}`, { skipAuth: true })
       window.location.href = data.url
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Google register failed')

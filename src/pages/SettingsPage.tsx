@@ -352,7 +352,7 @@ export function SettingsPage() {
       popup.document.write('<html><head><title>Connecting...</title><style>body{font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f8fafc;color:#64748b;}</style></head><body><div style="text-align:center;"><h2>Connecting to Google...</h2><p>Please wait while we redirect you.</p></div></body></html>')
     }
     try {
-      const data = await apiFetch<{ url: string }>('/connected-accounts/google/connect-url')
+      const data = await apiFetch<{ url: string }>(`/connected-accounts/google/connect-url?frontend_url=${encodeURIComponent(window.location.origin)}`)
       if (popup) {
         popup.location.href = data.url
       } else {
